@@ -75,7 +75,7 @@ export class Persona {
     }
 
     private comprobarSexo(sexo:string) {
-        if (this.sexo){
+        if (this.sexo == sexo){
             return true
         } else {
             return false
