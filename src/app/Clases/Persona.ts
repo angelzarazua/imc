@@ -8,8 +8,8 @@ export class Persona {
     private sexo: string;
     private peso: number;
     private altura: number;
-    private IMC
-    private mayorEdad
+    private IMC: number;
+    private mayorEdad: boolean;
 
     constructor()
     constructor(nombre: string, edad: number, sexo: string)
@@ -35,7 +35,7 @@ export class Persona {
         const PESO_ALTO = 1
 
         const IMC = (this.peso) / Math.pow(this.altura, 2)
-        console.log(IMC);
+        console.log('IMC: ', IMC);
 
         if (this.sexo == 'H' || this.sexo == 'h') {
             console.log('Hombre');
@@ -70,9 +70,18 @@ export class Persona {
         for (let i = 0; i < 8; i++) {
             NSS += caracteres.charAt(Math.floor(Math.random() * caracteres.length));
         }
-        console.log(NSS)
+        console.log("NSS: ", NSS)
         return NSS
     }
+
+    private comprobarSexo(sexo:string) {
+        if (this.sexo){
+            return true
+        } else {
+            return false
+        }
+    }
+
 
     setNombre(nombre: string) {
         this.nombre = nombre

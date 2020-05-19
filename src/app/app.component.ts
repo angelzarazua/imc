@@ -44,18 +44,13 @@ export class AppComponent implements OnInit {
     let persona: Persona
 
     console.clear()
-    console.log(tipo);
-    
-
+    console.log('Tipo: ', tipo);
 
     if (tipo == 1) {
-      console.log(1);
       persona = new Persona(nombre, edad, sexo, peso, altura)
     } else if (tipo == 2) {
-      console.log(2);
       persona = new Persona(nombre, edad, sexo)
     } else {
-      console.log(3);
       persona = new Persona()
       persona.setAltura(altura)
       persona.setEdad(edad)
@@ -63,15 +58,10 @@ export class AppComponent implements OnInit {
       persona.setPeso(peso)
       persona.setSexo(sexo)
     }
-
+    
     persona.setIMC()
     persona.setMayorEdad()
     this.arrayPersonas.push(persona)
     console.log(this.arrayPersonas);
-    console.log(sexo);
-    
-
-    // const main = new Main()
-    // main.start(nombre, edad, sexo, peso, altura)
   }
 }

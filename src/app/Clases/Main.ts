@@ -2,7 +2,6 @@ import { Persona } from './Persona'
 
 export class Main {
 
-    arrayPersonas = []
     start(nombre, edad, peso, sexo, altura){
         let p1 = new Persona(nombre, edad, sexo, peso, altura)
 
@@ -18,8 +17,6 @@ export class Main {
         p1.calcularIMC()
         p1.esMayorDeEdad
         p1.toString()
-
-        this.arrayPersonas.push()
     }
 
     private prepararPersonaParaArray() {
